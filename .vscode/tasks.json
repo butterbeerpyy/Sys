@@ -1,0 +1,50 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "build-sim",
+      "type": "process",
+      "command": "D:\\Applicanti\\iverilog\\bin\\iverilog.exe",
+      "args": [
+        "-g2012",
+        "-o",
+        "${workspaceFolder}/sim/out/p1_top_tb.vvp",
+        "${workspaceFolder}/tb/p1_top_tb.v",
+        "${workspaceFolder}/rtl/top/p1_top.v",
+        "${workspaceFolder}/rtl/mem/simple_ram.v",
+        "${workspaceFolder}/rtl/periph/vmac_unit.v",
+        "${workspaceFolder}/rtl/core/picorv32.v"
+      ],
+      "group": "build",
+      "problemMatcher": []
+    },
+    {
+      "label": "run-sim",
+      "type": "process",
+      "command": "D:\\Applicanti\\iverilog\\bin\\vvp.exe",
+      "args": [
+        "${workspaceFolder}/sim/out/p1_top_tb.vvp"
+      ],
+      "group": "test",
+      "problemMatcher": []
+    },
+    {
+      "label": "view-wave",
+      "type": "process",
+      "command": "D:\\Applicanti\\iverilog\\gtkwave\\bin\\gtkwave.exe",
+      "args": [
+        "${workspaceFolder}/sim/out/p1_top_tb.vcd"
+      ],
+      "problemMatcher": []
+    },
+    {
+      "label": "sim-all",
+      "dependsOn": [
+        "build-sim",
+        "run-sim"
+      ],
+      "dependsOrder": "sequence",
+      "problemMatcher": []
+    }
+  ]
+}
