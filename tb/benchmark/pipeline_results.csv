@@ -1,0 +1,7 @@
+test_id,workload,mode,cycles
+0,VMAC_8x8_batch1,NonPipeline,200
+1,VMAC_8x8_batch1,Pipeline,330
+2,VMAC_8x8_batch4,NonPipeline,788
+3,VMAC_8x8_batch4,Pipeline,789
+4,VMAC_8x8_batch8,NonPipeline,1572
+5,VMAC_8x8_batch8,Pipeline,1573

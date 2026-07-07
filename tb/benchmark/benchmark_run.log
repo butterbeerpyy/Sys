@@ -1,0 +1,40 @@
+VCD info: dumpfile sim/out/benchmark_cpu_vs_dma.vcd opened for output.
+========================================
+  CPU vs DMA Performance Benchmark
+========================================
+
+[Test 1] VMAC 2D 4x4 Matrix Multiplication
+  [1a] CPU mode...
+      Cycles: 359
+  [1b] DMA mode...
+      Cycles: 100001
+
+[Test 2] VMAC 2D 8x8 Matrix Multiplication
+  [2a] CPU mode...
+      Cycles: 100001
+  [2b] DMA mode...
+      Cycles: 100001
+
+[Test 3] VMAC 3D Batch=2 4x4
+  [3a] CPU mode...
+      Cycles: 200002
+  [3b] DMA mode...
+      Cycles: 100001
+
+[Test 4] VMAC 3D Batch=4 8x8
+  [4a] CPU mode...
+      Cycles: 400004
+  [4b] DMA mode...
+      Cycles: 100001
+
+[Test 5] VLM Image Preprocessing 112x112
+  [5a] CPU mode...
+      Cycles: 312545
+  [5b] DMA mode...
+      Cycles: 300001
+
+========================================
+  Benchmark Complete!
+  Results: tb/benchmark/benchmark_results.csv
+========================================
+tb/benchmark/benchmark_cpu_vs_dma.v:223: $finish called at 17129215000 (1ps)

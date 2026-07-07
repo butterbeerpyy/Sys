@@ -1,0 +1,234 @@
+VCD info: dumpfile sim/out/p1_top_dma_test.vcd opened for output.
+=== DMA Mode Test Start ===
+Expected C[0][0] = 372
+t=65000 instr=1 addr=0x00000000 wstrb=0x0 wdata=0xxxxxxxxx rdata=0x00001537
+t=95000 instr=1 addr=0x00000004 wstrb=0x0 wdata=0xxxxxxxxx rdata=0x50000293
+t=125000 instr=1 addr=0x00000008 wstrb=0x0 wdata=0xxxxxxxxx rdata=0x30552023
+t=155000 instr=1 addr=0x0000000c wstrb=0x0 wdata=0xxxxxxxxx rdata=0x60000293
+t=175000 instr=0 addr=0x00001300 wstrb=0xf wdata=0x00000500 rdata=0x00000000
+t=205000 instr=1 addr=0x00000010 wstrb=0x0 wdata=0x00000500 rdata=0x30552223
+t=235000 instr=1 addr=0x00000014 wstrb=0x0 wdata=0x00000500 rdata=0x70000293
+t=255000 instr=0 addr=0x00001304 wstrb=0xf wdata=0x00000600 rdata=0x00000000
+t=285000 instr=1 addr=0x00000018 wstrb=0x0 wdata=0x00000600 rdata=0x30552423
+t=315000 instr=1 addr=0x0000001c wstrb=0x0 wdata=0x00000600 rdata=0x00800293
+t=335000 instr=0 addr=0x00001308 wstrb=0xf wdata=0x00000700 rdata=0x00000000
+t=365000 instr=1 addr=0x00000020 wstrb=0x0 wdata=0x00000700 rdata=0x30552623
+t=395000 instr=1 addr=0x00000024 wstrb=0x0 wdata=0x00000700 rdata=0x30552823
+t=415000 instr=0 addr=0x0000130c wstrb=0xf wdata=0x00000008 rdata=0x00000000
+t=445000 instr=1 addr=0x00000028 wstrb=0x0 wdata=0x00000008 rdata=0x30552a23
+t=465000 instr=0 addr=0x00001310 wstrb=0xf wdata=0x00000008 rdata=0x00000000
+t=495000 instr=1 addr=0x0000002c wstrb=0x0 wdata=0x00000008 rdata=0x00200293
+t=515000 instr=0 addr=0x00001314 wstrb=0xf wdata=0x00000008 rdata=0x00000000
+t=545000 instr=1 addr=0x00000030 wstrb=0x0 wdata=0x00000008 rdata=0x32552223
+t=575000 instr=1 addr=0x00000034 wstrb=0x0 wdata=0x00000008 rdata=0x0200030b
+t=595000 instr=0 addr=0x00001324 wstrb=0xf wdata=0x00000002 rdata=0x00000000
+t=625000 instr=1 addr=0x00000038 wstrb=0x0 wdata=0x00000002 rdata=0x20000793
+DMA: state=1 idx=0 addr=0x00000000 valid=0 we=0 ready=0
+DMA: state=1 idx=0 addr=0x00000500 valid=1 we=0 ready=1
+DMA: state=1 idx=1 addr=0x00000500 valid=1 we=0 ready=1
+DMA: state=1 idx=2 addr=0x00000504 valid=1 we=0 ready=1
+DMA: state=1 idx=3 addr=0x00000508 valid=1 we=0 ready=1
+DMA: state=1 idx=4 addr=0x0000050c valid=1 we=0 ready=1
+DMA: state=1 idx=5 addr=0x00000510 valid=1 we=0 ready=1
+DMA: state=1 idx=6 addr=0x00000514 valid=1 we=0 ready=1
+DMA: state=1 idx=7 addr=0x00000518 valid=1 we=0 ready=1
+DMA: state=1 idx=8 addr=0x0000051c valid=1 we=0 ready=1
+DMA: state=1 idx=9 addr=0x00000520 valid=1 we=0 ready=1
+DMA: state=1 idx=10 addr=0x00000524 valid=1 we=0 ready=1
+DMA: state=1 idx=11 addr=0x00000528 valid=1 we=0 ready=1
+DMA: state=1 idx=12 addr=0x0000052c valid=1 we=0 ready=1
+DMA: state=1 idx=13 addr=0x00000530 valid=1 we=0 ready=1
+DMA: state=1 idx=14 addr=0x00000534 valid=1 we=0 ready=1
+DMA: state=1 idx=15 addr=0x00000538 valid=1 we=0 ready=1
+DMA: state=1 idx=16 addr=0x0000053c valid=1 we=0 ready=1
+DMA: state=1 idx=17 addr=0x00000540 valid=1 we=0 ready=1
+DMA: state=1 idx=18 addr=0x00000544 valid=1 we=0 ready=1
+DMA: state=1 idx=19 addr=0x00000548 valid=1 we=0 ready=1
+DMA: state=1 idx=20 addr=0x0000054c valid=1 we=0 ready=1
+DMA: state=1 idx=21 addr=0x00000550 valid=1 we=0 ready=1
+DMA: state=1 idx=22 addr=0x00000554 valid=1 we=0 ready=1
+DMA: state=1 idx=23 addr=0x00000558 valid=1 we=0 ready=1
+DMA: state=1 idx=24 addr=0x0000055c valid=1 we=0 ready=1
+DMA: state=1 idx=25 addr=0x00000560 valid=1 we=0 ready=1
+DMA: state=1 idx=26 addr=0x00000564 valid=1 we=0 ready=1
+DMA: state=1 idx=27 addr=0x00000568 valid=1 we=0 ready=1
+DMA: state=1 idx=28 addr=0x0000056c valid=1 we=0 ready=1
+DMA: state=1 idx=29 addr=0x00000570 valid=1 we=0 ready=1
+DMA: state=1 idx=30 addr=0x00000574 valid=1 we=0 ready=1
+DMA: state=1 idx=31 addr=0x00000578 valid=1 we=0 ready=1
+DMA: state=1 idx=32 addr=0x0000057c valid=1 we=0 ready=1
+DMA: state=1 idx=33 addr=0x00000580 valid=1 we=0 ready=1
+DMA: state=1 idx=34 addr=0x00000584 valid=1 we=0 ready=1
+DMA: state=1 idx=35 addr=0x00000588 valid=1 we=0 ready=1
+DMA: state=1 idx=36 addr=0x0000058c valid=1 we=0 ready=1
+DMA: state=1 idx=37 addr=0x00000590 valid=1 we=0 ready=1
+DMA: state=1 idx=38 addr=0x00000594 valid=1 we=0 ready=1
+DMA: state=1 idx=39 addr=0x00000598 valid=1 we=0 ready=1
+DMA: state=1 idx=40 addr=0x0000059c valid=1 we=0 ready=1
+DMA: state=1 idx=41 addr=0x000005a0 valid=1 we=0 ready=1
+DMA: state=1 idx=42 addr=0x000005a4 valid=1 we=0 ready=1
+DMA: state=1 idx=43 addr=0x000005a8 valid=1 we=0 ready=1
+DMA: state=1 idx=44 addr=0x000005ac valid=1 we=0 ready=1
+DMA: state=1 idx=45 addr=0x000005b0 valid=1 we=0 ready=1
+DMA: state=1 idx=46 addr=0x000005b4 valid=1 we=0 ready=1
+DMA: state=1 idx=47 addr=0x000005b8 valid=1 we=0 ready=1
+DMA: state=1 idx=48 addr=0x000005bc valid=1 we=0 ready=1
+DMA: state=1 idx=49 addr=0x000005c0 valid=1 we=0 ready=1
+DMA: state=1 idx=50 addr=0x000005c4 valid=1 we=0 ready=1
+DMA: state=1 idx=51 addr=0x000005c8 valid=1 we=0 ready=1
+DMA: state=1 idx=52 addr=0x000005cc valid=1 we=0 ready=1
+DMA: state=1 idx=53 addr=0x000005d0 valid=1 we=0 ready=1
+DMA: state=1 idx=54 addr=0x000005d4 valid=1 we=0 ready=1
+DMA: state=1 idx=55 addr=0x000005d8 valid=1 we=0 ready=1
+DMA: state=1 idx=56 addr=0x000005dc valid=1 we=0 ready=1
+DMA: state=1 idx=57 addr=0x000005e0 valid=1 we=0 ready=1
+DMA: state=1 idx=58 addr=0x000005e4 valid=1 we=0 ready=1
+DMA: state=1 idx=59 addr=0x000005e8 valid=1 we=0 ready=1
+DMA: state=1 idx=60 addr=0x000005ec valid=1 we=0 ready=1
+DMA: state=1 idx=61 addr=0x000005f0 valid=1 we=0 ready=1
+DMA: state=1 idx=62 addr=0x000005f4 valid=1 we=0 ready=1
+DMA: state=1 idx=63 addr=0x000005f8 valid=1 we=0 ready=1
+DMA: state=1 idx=64 addr=0x000005fc valid=1 we=0 ready=1
+DMA: state=2 idx=0 addr=0x00000600 valid=1 we=0 ready=1
+DMA: state=2 idx=1 addr=0x00000600 valid=1 we=0 ready=1
+DMA: state=2 idx=2 addr=0x00000604 valid=1 we=0 ready=1
+DMA: state=2 idx=3 addr=0x00000608 valid=1 we=0 ready=1
+DMA: state=2 idx=4 addr=0x0000060c valid=1 we=0 ready=1
+DMA: state=2 idx=5 addr=0x00000610 valid=1 we=0 ready=1
+DMA: state=2 idx=6 addr=0x00000614 valid=1 we=0 ready=1
+DMA: state=2 idx=7 addr=0x00000618 valid=1 we=0 ready=1
+DMA: state=2 idx=8 addr=0x0000061c valid=1 we=0 ready=1
+DMA: state=2 idx=9 addr=0x00000620 valid=1 we=0 ready=1
+DMA: state=2 idx=10 addr=0x00000624 valid=1 we=0 ready=1
+DMA: state=2 idx=11 addr=0x00000628 valid=1 we=0 ready=1
+DMA: state=2 idx=12 addr=0x0000062c valid=1 we=0 ready=1
+DMA: state=2 idx=13 addr=0x00000630 valid=1 we=0 ready=1
+DMA: state=2 idx=14 addr=0x00000634 valid=1 we=0 ready=1
+DMA: state=2 idx=15 addr=0x00000638 valid=1 we=0 ready=1
+DMA: state=2 idx=16 addr=0x0000063c valid=1 we=0 ready=1
+DMA: state=2 idx=17 addr=0x00000640 valid=1 we=0 ready=1
+DMA: state=2 idx=18 addr=0x00000644 valid=1 we=0 ready=1
+DMA: state=2 idx=19 addr=0x00000648 valid=1 we=0 ready=1
+DMA: state=2 idx=20 addr=0x0000064c valid=1 we=0 ready=1
+DMA: state=2 idx=21 addr=0x00000650 valid=1 we=0 ready=1
+DMA: state=2 idx=22 addr=0x00000654 valid=1 we=0 ready=1
+DMA: state=2 idx=23 addr=0x00000658 valid=1 we=0 ready=1
+DMA: state=2 idx=24 addr=0x0000065c valid=1 we=0 ready=1
+DMA: state=2 idx=25 addr=0x00000660 valid=1 we=0 ready=1
+DMA: state=2 idx=26 addr=0x00000664 valid=1 we=0 ready=1
+DMA: state=2 idx=27 addr=0x00000668 valid=1 we=0 ready=1
+DMA: state=2 idx=28 addr=0x0000066c valid=1 we=0 ready=1
+DMA: state=2 idx=29 addr=0x00000670 valid=1 we=0 ready=1
+DMA: state=2 idx=30 addr=0x00000674 valid=1 we=0 ready=1
+DMA: state=2 idx=31 addr=0x00000678 valid=1 we=0 ready=1
+DMA: state=2 idx=32 addr=0x0000067c valid=1 we=0 ready=1
+DMA: state=2 idx=33 addr=0x00000680 valid=1 we=0 ready=1
+DMA: state=2 idx=34 addr=0x00000684 valid=1 we=0 ready=1
+DMA: state=2 idx=35 addr=0x00000688 valid=1 we=0 ready=1
+DMA: state=2 idx=36 addr=0x0000068c valid=1 we=0 ready=1
+DMA: state=2 idx=37 addr=0x00000690 valid=1 we=0 ready=1
+DMA: state=2 idx=38 addr=0x00000694 valid=1 we=0 ready=1
+DMA: state=2 idx=39 addr=0x00000698 valid=1 we=0 ready=1
+DMA: state=2 idx=40 addr=0x0000069c valid=1 we=0 ready=1
+DMA: state=2 idx=41 addr=0x000006a0 valid=1 we=0 ready=1
+DMA: state=2 idx=42 addr=0x000006a4 valid=1 we=0 ready=1
+DMA: state=2 idx=43 addr=0x000006a8 valid=1 we=0 ready=1
+DMA: state=2 idx=44 addr=0x000006ac valid=1 we=0 ready=1
+DMA: state=2 idx=45 addr=0x000006b0 valid=1 we=0 ready=1
+DMA: state=2 idx=46 addr=0x000006b4 valid=1 we=0 ready=1
+DMA: state=2 idx=47 addr=0x000006b8 valid=1 we=0 ready=1
+DMA: state=2 idx=48 addr=0x000006bc valid=1 we=0 ready=1
+DMA: state=2 idx=49 addr=0x000006c0 valid=1 we=0 ready=1
+DMA: state=2 idx=50 addr=0x000006c4 valid=1 we=0 ready=1
+DMA: state=2 idx=51 addr=0x000006c8 valid=1 we=0 ready=1
+DMA: state=2 idx=52 addr=0x000006cc valid=1 we=0 ready=1
+DMA: state=2 idx=53 addr=0x000006d0 valid=1 we=0 ready=1
+DMA: state=2 idx=54 addr=0x000006d4 valid=1 we=0 ready=1
+DMA: state=2 idx=55 addr=0x000006d8 valid=1 we=0 ready=1
+DMA: state=2 idx=56 addr=0x000006dc valid=1 we=0 ready=1
+DMA: state=2 idx=57 addr=0x000006e0 valid=1 we=0 ready=1
+DMA: state=2 idx=58 addr=0x000006e4 valid=1 we=0 ready=1
+DMA: state=2 idx=59 addr=0x000006e8 valid=1 we=0 ready=1
+DMA: state=2 idx=60 addr=0x000006ec valid=1 we=0 ready=1
+DMA: state=2 idx=61 addr=0x000006f0 valid=1 we=0 ready=1
+DMA: state=2 idx=62 addr=0x000006f4 valid=1 we=0 ready=1
+DMA: state=2 idx=63 addr=0x000006f8 valid=1 we=0 ready=1
+DMA: state=2 idx=64 addr=0x000006fc valid=1 we=0 ready=1
+DMA: state=3 idx=64 addr=0x00000700 valid=1 we=0 ready=1
+DMA: state=4 idx=0 addr=0x00000700 valid=0 we=0 ready=0
+DMA: state=4 idx=0 addr=0x00000700 valid=1 we=1 ready=1
+DMA: state=4 idx=1 addr=0x00000700 valid=1 we=1 ready=1
+DMA: state=4 idx=2 addr=0x00000704 valid=1 we=1 ready=1
+DMA: state=4 idx=3 addr=0x00000708 valid=1 we=1 ready=1
+DMA: state=4 idx=4 addr=0x0000070c valid=1 we=1 ready=1
+DMA: state=4 idx=5 addr=0x00000710 valid=1 we=1 ready=1
+DMA: state=4 idx=6 addr=0x00000714 valid=1 we=1 ready=1
+DMA: state=4 idx=7 addr=0x00000718 valid=1 we=1 ready=1
+DMA: state=4 idx=8 addr=0x0000071c valid=1 we=1 ready=1
+DMA: state=4 idx=9 addr=0x00000720 valid=1 we=1 ready=1
+DMA: state=4 idx=10 addr=0x00000724 valid=1 we=1 ready=1
+DMA: state=4 idx=11 addr=0x00000728 valid=1 we=1 ready=1
+DMA: state=4 idx=12 addr=0x0000072c valid=1 we=1 ready=1
+DMA: state=4 idx=13 addr=0x00000730 valid=1 we=1 ready=1
+DMA: state=4 idx=14 addr=0x00000734 valid=1 we=1 ready=1
+DMA: state=4 idx=15 addr=0x00000738 valid=1 we=1 ready=1
+DMA: state=4 idx=16 addr=0x0000073c valid=1 we=1 ready=1
+DMA: state=4 idx=17 addr=0x00000740 valid=1 we=1 ready=1
+DMA: state=4 idx=18 addr=0x00000744 valid=1 we=1 ready=1
+DMA: state=4 idx=19 addr=0x00000748 valid=1 we=1 ready=1
+DMA: state=4 idx=20 addr=0x0000074c valid=1 we=1 ready=1
+DMA: state=4 idx=21 addr=0x00000750 valid=1 we=1 ready=1
+DMA: state=4 idx=22 addr=0x00000754 valid=1 we=1 ready=1
+DMA: state=4 idx=23 addr=0x00000758 valid=1 we=1 ready=1
+DMA: state=4 idx=24 addr=0x0000075c valid=1 we=1 ready=1
+DMA: state=4 idx=25 addr=0x00000760 valid=1 we=1 ready=1
+DMA: state=4 idx=26 addr=0x00000764 valid=1 we=1 ready=1
+DMA: state=4 idx=27 addr=0x00000768 valid=1 we=1 ready=1
+DMA: state=4 idx=28 addr=0x0000076c valid=1 we=1 ready=1
+DMA: state=4 idx=29 addr=0x00000770 valid=1 we=1 ready=1
+DMA: state=4 idx=30 addr=0x00000774 valid=1 we=1 ready=1
+DMA: state=4 idx=31 addr=0x00000778 valid=1 we=1 ready=1
+DMA: state=4 idx=32 addr=0x0000077c valid=1 we=1 ready=1
+DMA: state=4 idx=33 addr=0x00000780 valid=1 we=1 ready=1
+DMA: state=4 idx=34 addr=0x00000784 valid=1 we=1 ready=1
+DMA: state=4 idx=35 addr=0x00000788 valid=1 we=1 ready=1
+DMA: state=4 idx=36 addr=0x0000078c valid=1 we=1 ready=1
+DMA: state=4 idx=37 addr=0x00000790 valid=1 we=1 ready=1
+DMA: state=4 idx=38 addr=0x00000794 valid=1 we=1 ready=1
+DMA: state=4 idx=39 addr=0x00000798 valid=1 we=1 ready=1
+DMA: state=4 idx=40 addr=0x0000079c valid=1 we=1 ready=1
+DMA: state=4 idx=41 addr=0x000007a0 valid=1 we=1 ready=1
+DMA: state=4 idx=42 addr=0x000007a4 valid=1 we=1 ready=1
+DMA: state=4 idx=43 addr=0x000007a8 valid=1 we=1 ready=1
+DMA: state=4 idx=44 addr=0x000007ac valid=1 we=1 ready=1
+DMA: state=4 idx=45 addr=0x000007b0 valid=1 we=1 ready=1
+DMA: state=4 idx=46 addr=0x000007b4 valid=1 we=1 ready=1
+DMA: state=4 idx=47 addr=0x000007b8 valid=1 we=1 ready=1
+DMA: state=4 idx=48 addr=0x000007bc valid=1 we=1 ready=1
+DMA: state=4 idx=49 addr=0x000007c0 valid=1 we=1 ready=1
+DMA: state=4 idx=50 addr=0x000007c4 valid=1 we=1 ready=1
+DMA: state=4 idx=51 addr=0x000007c8 valid=1 we=1 ready=1
+DMA: state=4 idx=52 addr=0x000007cc valid=1 we=1 ready=1
+DMA: state=4 idx=53 addr=0x000007d0 valid=1 we=1 ready=1
+DMA: state=4 idx=54 addr=0x000007d4 valid=1 we=1 ready=1
+DMA: state=4 idx=55 addr=0x000007d8 valid=1 we=1 ready=1
+DMA: state=4 idx=56 addr=0x000007dc valid=1 we=1 ready=1
+DMA: state=4 idx=57 addr=0x000007e0 valid=1 we=1 ready=1
+DMA: state=4 idx=58 addr=0x000007e4 valid=1 we=1 ready=1
+DMA: state=4 idx=59 addr=0x000007e8 valid=1 we=1 ready=1
+DMA: state=4 idx=60 addr=0x000007ec valid=1 we=1 ready=1
+DMA: state=4 idx=61 addr=0x000007f0 valid=1 we=1 ready=1
+DMA: state=4 idx=62 addr=0x000007f4 valid=1 we=1 ready=1
+DMA: state=4 idx=63 addr=0x000007f8 valid=1 we=1 ready=1
+DMA: state=5 idx=64 addr=0x000007fc valid=1 we=1 ready=1
+VMAC done: c00=0x00000174
+DEBUG: reg_a[0:7] = 1 2 3 4 5 6 7 8
+DEBUG: reg_b[0,8,16,24,32,40,48,56] = 15 14 13 12 11 10 9 8
+DEBUG: cfg_m=8 cfg_n=8 cfg_k=8
+t=2655000 instr=1 addr=0x0000003c wstrb=0x0 wdata=0x00000002 rdata=0x05500293
+t=2685000 instr=1 addr=0x00000040 wstrb=0x0 wdata=0x00000002 rdata=0x0057a023
+t=2715000 instr=1 addr=0x00000044 wstrb=0x0 wdata=0x00000002 rdata=0x0000006f
+t=2735000 instr=0 addr=0x00000200 wstrb=0xf wdata=0x00000055 rdata=0x00000000
+PASS: DMA mode test completed successfully
+      Computed 271 cycles
+tb/p1_top_dma_test.v:253: $finish called at 2745000 (1ps)

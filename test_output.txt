@@ -1,0 +1,6 @@
+VCD info: dumpfile sim/out/p1_top_pipeline_test.vcd opened for output.
+=== Pipeline DMA Test Start ===
+Testing 4 batches of 2x2 matrices
+Test data prepared in RAM
+VMAC configured for 4 batches of 2x2 matrices
+DMA started at time 315000

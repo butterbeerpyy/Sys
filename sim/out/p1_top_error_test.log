@@ -1,0 +1,22 @@
+VCD info: dumpfile sim/out/p1_top_error_test.vcd opened for output.
+=== Error Handling Test Start ===
+
+[Test 1] Testing address bounds checking...
+PASS: Test 1 - Address bounds checking works (invalid address rejected)
+
+[Test 2] Testing error status reporting...
+PASS: Test 2 - Error status bit accessible and initialized correctly
+
+[Test 3] Testing timeout counter...
+PASS: Test 3 - Timeout counter exists and initialized
+
+========================================
+  All error handling tests passed!
+========================================
+
+Note: Full timeout test would require ~65K cycles
+      Current implementation verified through:
+      - Address bounds checking
+      - Error state infrastructure
+      - Timeout counter mechanism
+tb/p1_top_error_test.v:173: $finish called at 325000 (1ps)

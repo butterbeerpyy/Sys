@@ -1,0 +1,5 @@
+test_id,batch,single_cycles,dual_cycles,speedup,improvement_pct
+0,1,200,203,0.985,-1.5
+1,2,396,336,1.179,15.2
+2,4,788,602,1.309,23.6
+3,8,1572,1134,1.386,27.9

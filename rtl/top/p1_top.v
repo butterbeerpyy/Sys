@@ -25,6 +25,27 @@ module p1_top (
     wire [31:0] vmac_rdata;
     wire vmac_selected;
 
+    wire vlm_ready;
+    wire [31:0] vlm_rdata;
+    wire vlm_selected;
+    wire vlm_dma_valid;
+    wire vlm_dma_we;
+    wire [31:0] vlm_dma_addr;
+    wire [31:0] vlm_dma_wdata;
+    wire [3:0] vlm_dma_wstrb;
+    wire vlm_dma_ready;
+    wire [31:0] vlm_dma_rdata;
+    wire vlm_dma_active;
+
+    wire vmac_dma_valid;
+    wire vmac_dma_we;
+    wire [31:0] vmac_dma_addr;
+    wire [31:0] vmac_dma_wdata;
+    wire [3:0] vmac_dma_wstrb;
+    wire vmac_dma_ready;
+    wire [31:0] vmac_dma_rdata;
+    wire vmac_dma_active;
+
     wire pcpi_valid;
     wire [31:0] pcpi_insn;
     wire [31:0] pcpi_rs1;
@@ -34,8 +55,29 @@ module p1_top (
     wire pcpi_wait;
     wire pcpi_ready;
 
-    assign mem_ready = vmac_selected ? vmac_ready : ram_ready;
-    assign mem_rdata = vmac_selected ? vmac_rdata : ram_rdata;
+    wire ram_cpu_valid = mem_valid && !vmac_selected && !vlm_selected && !vmac_dma_active && !vlm_dma_active;
+    wire ram_dma_valid = vmac_dma_valid || vlm_dma_valid;
+    wire ram_valid = ram_cpu_valid || ram_dma_valid;
+
+    // DMA 请求仲裁：VMAC 优先
+    wire dma_arb_vmac = vmac_dma_valid;
+    wire dma_arb_vlm  = vlm_dma_valid && !vmac_dma_valid;
+
+    wire ram_we   = dma_arb_vmac ? vmac_dma_we   : (dma_arb_vlm ? vlm_dma_we   : 1'b0);
+    wire [31:0] ram_addr_dma  = dma_arb_vmac ? vmac_dma_addr : (dma_arb_vlm ? vlm_dma_addr : 32'b0);
+    wire [31:0] ram_wdata_dma = dma_arb_vmac ? vmac_dma_wdata : (dma_arb_vlm ? vlm_dma_wdata : 32'b0);
+    wire [3:0]  ram_wstrb_dma = dma_arb_vmac ? vmac_dma_wstrb : (dma_arb_vlm ? vlm_dma_wstrb : 4'b0);
+
+    assign vmac_dma_ready = dma_arb_vmac && ram_ready;
+    assign vmac_dma_rdata = ram_rdata;
+    assign vlm_dma_ready  = dma_arb_vlm  && ram_ready;
+    assign vlm_dma_rdata  = ram_rdata;
+
+    assign mem_ready = vmac_selected ? vmac_ready :
+                       vlm_selected  ? vlm_ready  :
+                       ((vmac_dma_active || vlm_dma_active) ? 1'b0 : ram_ready);
+    assign mem_rdata = vmac_selected ? vmac_rdata :
+                       vlm_selected  ? vlm_rdata  : ram_rdata;
     assign pass = ram_pass;
     assign pass_value = ram_pass_value;
 
@@ -96,11 +138,11 @@ module p1_top (
     ) u_ram (
         .clk(clk),
         .resetn(resetn),
-        .valid(mem_valid && !vmac_selected),
-        .instr(mem_instr),
-        .addr(mem_addr),
-        .wdata(mem_wdata),
-        .wstrb(mem_wstrb),
+        .valid(ram_valid),
+        .instr(mem_instr && !ram_dma_valid),
+        .addr(ram_dma_valid ? ram_addr_dma : mem_addr),
+        .wdata(ram_dma_valid ? ram_wdata_dma : mem_wdata),
+        .wstrb(ram_dma_valid ? ram_wstrb_dma : mem_wstrb),
         .ready(ram_ready),
         .rdata(ram_rdata),
         .pass(ram_pass),
@@ -128,6 +170,36 @@ module p1_top (
         .pcpi_wait(pcpi_wait),
         .pcpi_ready(pcpi_ready),
         .done_pulse(vmac_done),
-        .result_value(vmac_result)
+        .result_value(vmac_result),
+        .dma_valid(vmac_dma_valid),
+        .dma_we(vmac_dma_we),
+        .dma_addr(vmac_dma_addr),
+        .dma_wdata(vmac_dma_wdata),
+        .dma_wstrb(vmac_dma_wstrb),
+        .dma_ready(vmac_dma_ready),
+        .dma_rdata(vmac_dma_rdata),
+        .dma_active(vmac_dma_active)
+    );
+
+    vlm_periph #(
+        .BASE_ADDR(32'h0000_2000)
+    ) u_vlm (
+        .clk(clk),
+        .resetn(resetn),
+        .valid(mem_valid),
+        .addr(mem_addr),
+        .wdata(mem_wdata),
+        .wstrb(mem_wstrb),
+        .ready(vlm_ready),
+        .rdata(vlm_rdata),
+        .selected(vlm_selected),
+        .dma_valid(vlm_dma_valid),
+        .dma_we(vlm_dma_we),
+        .dma_addr(vlm_dma_addr),
+        .dma_wdata(vlm_dma_wdata),
+        .dma_wstrb(vlm_dma_wstrb),
+        .dma_ready(vlm_dma_ready),
+        .dma_rdata(vlm_dma_rdata),
+        .dma_active(vlm_dma_active)
     );
 endmodule

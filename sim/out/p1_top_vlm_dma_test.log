@@ -1,0 +1,39 @@
+VCD info: dumpfile sim/out/p1_top_vlm_dma_test.vcd opened for output.
+=== VLM DMA Mode Test ===
+[OK] Test pattern: bright center 30x30
+[1] Loading image to RAM at 0x00000400...
+    [OK] 12544 pixels loaded
+[2] Configuring VLM source address...
+    [OK] src_addr = 0x00000400
+[3] Triggering VLM DMA mode...
+    [OK] DMA mode triggered
+[4] Waiting for VLM done...
+    cycle 0: dma_state=1 dma_active=1 dma_valid=1 dma_ready=1 pixel_cnt=0
+              vlm_done=0 scanner_state=1 scanner_pixel_cnt=0
+    cycle 10000: dma_state=1 dma_active=1 dma_valid=1 dma_ready=1 pixel_cnt=9999
+              vlm_done=0 scanner_state=1 scanner_pixel_cnt=9998
+    [OK] VLM done in 12615 cycles
+[5] Reading Top-16 indices:
+    [00] = 43
+    [01] = 44
+    [02] = 20
+    [03] = 45
+    [04] = 52
+    [05] = 27
+    [06] = 28
+    [07] = 29
+    [08] = 30
+    [09] = 33
+    [10] = 34
+    [11] = 35
+    [12] = 12
+    [13] = 36
+    [14] = 37
+    [15] = 38
+[6] Verifying results...
+    [OK] 16 non-zero indices (expected >= 8)
+
+=== PASS: VLM DMA Mode Test Completed ===
+
+[OK] Indices written to tb/vlm/output_indices_dma.hex
+tb/p1_top_vlm_dma_test.v:157: $finish called at 126225000 (1ps)

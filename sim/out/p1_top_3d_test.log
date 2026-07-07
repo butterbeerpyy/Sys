@@ -1,0 +1,15 @@
+VCD info: dumpfile sim/out/p1_top_3d_test.vcd opened for output.
+=== 3D Batch Mode Test Start ===
+Testing 2 batches of 2x2 matrices
+DMA: Loading batch 0 matrix A
+DMA: Loading batch 0 matrix B
+DMA: Storing batch 0 matrix C
+DMA: Loading batch 1 matrix A
+DMA: Loading batch 1 matrix B
+DMA: Storing batch 1 matrix C
+VMAC done: final c00=0x00000024
+Batch 0 verified: C[0]=19 (expected 19)
+Batch 1 verified: C[0]=36 (expected 36)
+PASS: 3D batch test completed successfully
+      Computed in 115 cycles
+tb/p1_top_3d_test.v:255: $finish called at 1185000 (1ps)

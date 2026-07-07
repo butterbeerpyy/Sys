@@ -1,0 +1,5 @@
+test_id,batch_count,mode,cycles
+0,1,DualDMA,203
+1,2,DualDMA,336
+2,4,DualDMA,602
+3,8,DualDMA,1134
